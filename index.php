@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+require('../vendor/autoload.php');
 
 include('includes/config.php');
 if(isset($_GET['action']) && $_GET['action']=="add"){
