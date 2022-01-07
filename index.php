@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require('../vendor/autoload.php');
+
 
 include('includes/config.php');
 if(isset($_GET['action']) && $_GET['action']=="add"){
@@ -242,10 +242,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 						     <i class="icon fa fa-dollar"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading green">money back</h4>
+							<h4 class="info-box-heading green">30 Days Return
+</h4>
 						</div>
 					</div>	
-					<h6 class="text">30 Day Money Back Guarantee.</h6>
+					<h6 class="text">Simply return it within 30 days for an exchange.</h6>
 				</div>
 			</div><!-- .col -->
 
@@ -256,7 +257,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<i class="icon fa fa-truck"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading orange">free shipping</h4>
+							<h4 class="info-box-heading orange">Free Shipping</h4>
 						</div>
 					</div>
 					<h6 class="text">free ship-on oder over Rs. 600.00</h6>	
@@ -299,14 +300,15 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 }
 			 </style>
 				<ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
-				<li class="active"><a href="#Cloths" data-toggle="tab">Cloths</a></li>
+					<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+				
 				<li><a href="#Men" data-toggle="tab">Men</a></li>
 				<li><a href="#Women" data-toggle="tab">Women</a></li>
 				<li><a href="#Mobiles" data-toggle="tab">Mobiles</a></li>
 				<li><a href="#Elecronics" data-toggle="tab">Electronics</a></li>
 				<li><a href="#Shoes" data-toggle="tab">Shoes</a></li>
 				<li><a href="#books" data-toggle="tab">Books</a></li>
-				<li><a href="#furniture" data-toggle="tab">Furniture</a></li>
+				
 				</ul><!-- /.nav-tabs -->
 			</div>
 
@@ -315,7 +317,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
 <?php
-$ret=mysqli_query($con,"select * from products where category='Cloths'");
+$ret=mysqli_query($con,"select * from products where category=5");
 while ($row=mysqli_fetch_array($ret)) 
 {
 	# code...
@@ -550,7 +552,7 @@ while ($row=mysqli_fetch_array($ret))
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 		<?php
-$ret=mysqli_query($con,"select * from products where category=3");
+$ret=mysqli_query($con,"select * from products where category='Cloths'");
 while ($row=mysqli_fetch_array($ret)) 
 {
 	# code...
@@ -609,14 +611,16 @@ while ($row=mysqli_fetch_array($ret))
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 		<?php
-$ret=mysqli_query($con,"select * from products where category=3");
+$ret=mysqli_query($con,"select * from products where category=5 and subCategory=51");
 while ($row=mysqli_fetch_array($ret)) 
 {
 	# code...
 
 
 ?>
+<style>
 
+</style>
 						    	
 		<div class="item item-carousel">
 			<div class="products">
@@ -624,6 +628,7 @@ while ($row=mysqli_fetch_array($ret))
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
+				
 				<a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>">
 				<img  src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"  width="180" height="300" alt=""></a>
 			</div><!-- /.image -->			
@@ -668,7 +673,7 @@ while ($row=mysqli_fetch_array($ret))
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 		<?php
-$ret=mysqli_query($con,"select * from products where category='Shoes'");
+$ret=mysqli_query($con,"select * from products where category='30'");
 while ($row=mysqli_fetch_array($ret)) 
 {
 	# code...
@@ -782,7 +787,7 @@ while ($row=mysqli_fetch_array($ret))
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 		<?php
-$ret=mysqli_query($con,"select * from products where category=3");
+$ret=mysqli_query($con,"select * from products where category='books'");
 while ($row=mysqli_fetch_array($ret)) 
 {
 	# code...
@@ -835,7 +840,7 @@ while ($row=mysqli_fetch_array($ret))
 
 
 
-		<div class="tab-pane" id="furniture">
+		<div class="tab-pane" id="home">
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
 		<?php
@@ -926,30 +931,29 @@ Women’s fashion
 
 
 <style>
-	.sunglasses{
-		font-size: 23px;
+	.YOUMAYALSOLIKE{
+		font-size: 22px;
     font-weight: 600;
     letter-spacing: 3px;
     text-align: center;
-    margin-top: -42px;
-    padding-top: 23px;
-        background-color: #f8f8f8;
- 
-    padding-bottom: 25px;
+        margin-top: -26px;
+    padding-top: 20px;
+    /* background-color: #f8f8f8; */
+    padding-bottom: 36px;
     text-transform: uppercase;
 	}
 </style>
 			<div class="sections prod-slider-small outer-top-small">
 
-				<div class="row"><div class="sunglasses"><center><font color="#12cca7">SUNGLASSES</font></center></div>
+				<div class="row"><div class="YOUMAYALSOLIKE"><center><font color="#12cca7">You may also like</font></center></div>
 					<div class="col-md-6">
 						
 	                   <section class="section">
-	                   	<h3 class="section-title"><font color="gray">Men</font></h3>
+	                   	<!-- <h3 class="section-title"><font color="black">Men</font></h3> -->
 	                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	   
 <?php
-$ret=mysqli_query($con,"select * from products where category=9 and subCategory=19");
+$ret=mysqli_query($con,"select * from products where category=30 and subCategory=32");
 while ($row=mysqli_fetch_array($ret)) 
 {
 ?>
@@ -992,7 +996,114 @@ while ($row=mysqli_fetch_array($ret))
 					</div>
 					<div class="col-md-6">
 						<section class="section">
-							<h3 class="section-title"><font color="gray">Women</font></h3>
+							<!-- <h3 class="section-title"><font color="black">Women</font></h3> -->
+		                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
+	<?php
+$ret=mysqli_query($con,"select * from products where category=30 and subCategory=31");
+while ($row=mysqli_fetch_array($ret)) 
+{
+?>
+
+
+
+		<div class="item item-carousel">
+			<div class="products">
+				
+	<div class="product">		
+		<div class="product-image">
+			<div class="image">
+				<a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img  src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"  width="300" height="300"></a>
+			</div><!-- /.image -->			                        		   
+		</div><!-- /.product-image -->
+			
+		
+		<div class="product-info text-left">
+			<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a></h3>
+			<div class="rating rateit-small"></div>
+			<div class="description"></div>
+
+			<div class="product-price">	
+				<span class="price">
+					Rs .<?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+									
+			</div>
+			
+		</div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+			</div>
+			</div>
+		</div>
+<?php }?>
+
+		
+	
+				                   	</div>
+	                   </section>
+
+					</div>
+				</div>
+			</div>
+		<!-- ============================================== TABS : END ============================================== -->
+
+
+
+<!-- ====================================================== -->
+
+	<div class="sections prod-slider-small outer-top-small">
+
+				<div class="row"><div class="YOUMAYALSOLIKE"><center><font color="#12cca7">NEW PRODUCT</font></center></div>
+					<div class="col-md-6">
+						
+	                   <section class="section">
+<!-- 	                   	<h3 class="section-title"><font color="gray">Men</font></h3> -->
+	                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
+	   
+<?php
+$ret=mysqli_query($con,"select * from products where category=50 and subCategory=51");
+while ($row=mysqli_fetch_array($ret)) 
+{
+?>
+
+
+
+		<div class="item item-carousel">
+			<div class="products">
+				
+	<div class="product">		
+		<div class="product-image">
+			<div class="image">
+				<a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><img  src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>"  width="180" height="300"></a>
+			</div><!-- /.image -->			                        		   
+		</div><!-- /.product-image -->
+			
+		
+		<div class="product-info text-left">
+			<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a></h3>
+			<div class="rating rateit-small"></div>
+			<div class="description"></div>
+
+			<div class="product-price">	
+				<span class="price">
+					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+									
+			</div>
+			
+		</div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+			</div>
+			</div>
+		</div>
+<?php }?>
+
+	
+			                   	</div>
+	                   </section>
+					</div>
+					<div class="col-md-6">
+						<section class="section">
+							<!-- <h3 class="section-title"><font color="gray">Women</font></h3> -->
 		                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	<?php
 $ret=mysqli_query($con,"select * from products where category=9 and subCategory=20");
@@ -1040,7 +1151,18 @@ while ($row=mysqli_fetch_array($ret))
 					</div>
 				</div>
 			</div>
-		<!-- ============================================== TABS : END ============================================== -->
+
+
+
+
+
+
+
+<!-- ======================================================= -->
+
+
+
+
 
 		
 

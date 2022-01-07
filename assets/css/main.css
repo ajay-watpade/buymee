@@ -340,14 +340,15 @@ img[src="assets/images/blank.gif"] {
   }
 }
 .section-title {
-  font-size: 23px;
+  font-size: 22px;
+
     font-weight: 600;
     letter-spacing: 3px;
     text-align: center;
 
   border-bottom: 1px solid #e3e3e3;
   padding-bottom: 25px;
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
 }
 .home-owl-carousel .owl-controls,
 .blog-slider .owl-controls,
@@ -2419,10 +2420,9 @@ a {
   font-size: 35px;
 }
 .info-boxes .info-box .info-box-heading {
-  font-size: 35px;
-  line-height: 30px;
-  text-transform: uppercase;
-  font-family: 'BebasNeueBold';
+ font-size: 22px;
+    line-height: 28px;
+    /*text-transform: lowercase;*/
   margin-top: 5px;
 }
 .info-boxes .info-box .info-box-heading.orange {
@@ -2433,9 +2433,7 @@ a {
 }
 .info-boxes .info-box .text {
   color: #666666;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 13px;
+font-size: 11px;
   margin: 0px;
 }
 .scroll-tabs {
@@ -2470,7 +2468,7 @@ a {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  padding: 3px 23px !important;
+  padding: 27px 23px !important;
   position: relative;
 }
 .scroll-tabs .nav-tab-line li a:hover,
